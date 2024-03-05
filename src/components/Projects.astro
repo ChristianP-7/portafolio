@@ -1,40 +1,81 @@
 ---
 import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
+import Java from "./icons/Java.astro"
+import MySQL from "./icons/MySQL.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import Spring from "./icons/Spring.astro"
+import Docker from "./icons/Docker.astro"
+import React from "./icons/React.astro"
+import Wordpress from "./icons/Wordpress.astro"
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
+  SPRING: {
+    name: "Spring",
+    class: "bg-white text-black",
+    icon: Spring,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#F29111] text-white",
+    icon: MySQL,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-[#433331] text-white",
+    icon: Java,
+  },
+  DOCKER: {
+    name: "Docker",
     class: "bg-black text-white",
-    icon: NextJS,
+    icon: Docker,
   },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
+  REACT: {
+    name: "React",
+    class: "bg-black text-white",
+    icon: React,
   },
+  WORDPRESS: {
+    name: "Wordpress",
+    class: "bg-white text-black",
+    icon: Wordpress,
+  },
+
 }
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "API REST para gestionar clientes",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "API REST que permite hacer operaciones CRUD con una lista de clientes, y todo interactuando con una base de datos propia. Creado desde cero en Java con Spring Boot, utilizando JPA implementado en Hibernate, con una base de datos gestionada por MySQL además del uso de React para el Frontend.",
+    //Falta cambiar links del proyecto
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/projects/proyecto1.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL, TAGS.REACT, TAGS.DOCKER],
   },
+
   {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    title: "Aplicación de escritorio para Spa de Mascotas",
     description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+      "Esta aplicación permite guardar en una base de datos los datos de las mascotas y los dueños de éstas Para poseriormente poder realizar operacioines CRUD. Desarrollado en Java con JSP, utilizando JPA y una base de datos con MySQL.",
+    //Falta cambiar links del proyecto
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/proyecto2.webp",
+    tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.DOCKER],
   },
+
+  {
+    title: "Página Web de Noticias",
+    description:
+      "Página web de noticias en formato blog que implementa varios widgets además de categorías y paginación. Desarrollado y administrado enteramente con Wordpress y alojado en un hosting de GoDaddy. Proximamente en funcionamiento.",
+    //Falta cambiar links del proyecto
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "/projects/proyecto3.webp",
+    tags: [TAGS.WORDPRESS],
+  },
+
 ]
 ---
 
@@ -44,7 +85,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+      <img alt="proyecto1" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
     </div>
   </div>
 
