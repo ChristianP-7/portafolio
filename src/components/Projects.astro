@@ -8,6 +8,10 @@ import Spring from "./icons/Spring.astro"
 import Docker from "./icons/Docker.astro"
 import React from "./icons/React.astro"
 import Wordpress from "./icons/Wordpress.astro"
+import Postgres from "./icons/PostgreSQL.astro"
+import Next from "./icons/Next.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import GoDaddy from "./icons/GoDaddy.astro"
 
 const TAGS = {
   SPRING: {
@@ -19,6 +23,11 @@ const TAGS = {
     name: "MySQL",
     class: "bg-[#F29111] text-white",
     icon: MySQL,
+  },
+  POSTGRESQL: {
+    name: "PosgreSQL",
+    class: "bg-white text-black",
+    icon: Postgres,
   },
   JAVA: {
     name: "Java",
@@ -40,18 +49,43 @@ const TAGS = {
     class: "bg-white text-black",
     icon: Wordpress,
   },
-
+  NEXT: {
+    name: "Next",
+    class: "bg-[#003785] text-white",
+    icon: Next,
+  },
+  TAILWIND: {
+    name: "Tailwind",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+  GODADDY: {
+    name: "GoDaddy",
+    class: "bg-[#1BDBDB] text-black",
+    icon: GoDaddy,
+  },
 }
 const PROJECTS = [
+{
+    title: "MediLatam Connect",
+    description:
+      "La aplicación de telemedicina permite a los pacientes tener consultas médicas mediante video llamadas y otros medios de comunicación, todo desde la comodidad de sus hogares. Los médicos pueden acceder a la historia clínica del paciente durante la consulta, mientras que el personal administrativo del centro médico puede gestionar las reuniones y otras funciones de la aplicación.",
+
+    link: "https://medilatam.vercel.app/dashboard",
+    github: "https://github.com/ChristianP-7/c17-49-n-java",
+    image: "/projects/proyecto4.webp",
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.NEXT, TAGS.POSTGRESQL, TAGS.TAILWIND],
+  },
+
   {
     title: "API REST para gestionar clientes",
     description:
-      "API REST que permite hacer operaciones CRUD con una lista de clientes, y todo interactuando con una base de datos propia. Creado desde cero en Java con Spring Boot, utilizando JPA implementado en Hibernate, con una base de datos gestionada por MySQL además del uso de React para el Frontend.",
-    //Falta cambiar links del proyecto
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+      "API REST que permite hacer operaciones CRUD con una lista de clientes, y todo interactuando con una base de datos propia. Creado desde cero en Java con Spring Boot, utilizando JPA implementado en Hibernate, con una base de datos gestionada por PostgreSQL además del uso de React para el Frontend. (Tener paciencia al abrir porque el servidor tarda en iniciar)",
+
+    link: "https://clientes-gestion.vercel.app/",
+    github: "https://github.com/ChristianP-7/clientes-gestion",
     image: "/projects/proyecto1.webp",
-    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.MYSQL, TAGS.REACT, TAGS.DOCKER],
+    tags: [TAGS.JAVA, TAGS.SPRING, TAGS.REACT, TAGS.POSTGRESQL, TAGS.DOCKER],
   },
 
   {
@@ -69,7 +103,7 @@ const PROJECTS = [
       "Página web de noticias en formato blog que implementa varios widgets además de categorías y paginación. Desarrollado y administrado enteramente con Wordpress y alojado en un hosting de GoDaddy. Proximamente en funcionamiento.",
     link: "https://elpuebloperuano.com/",
     image: "/projects/proyecto3.webp",
-    tags: [TAGS.WORDPRESS],
+    tags: [TAGS.WORDPRESS, TAGS.GODADDY],
   },
 
 ]
