@@ -12,6 +12,10 @@ import Postgres from "./icons/PostgreSQL.astro"
 import Next from "./icons/Next.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import GoDaddy from "./icons/GoDaddy.astro"
+import Angular from "./icons/Angular.astro"
+import Express from "./icons/Express.astro"
+import Node from "./icons/Node.astro"
+import Vercel from "./icons/Vercel.astro"
 
 const TAGS = {
   SPRING: {
@@ -50,12 +54,12 @@ const TAGS = {
     icon: Wordpress,
   },
   NEXT: {
-    name: "Next",
+    name: "Next.js",
     class: "bg-[#003785] text-white",
     icon: Next,
   },
   TAILWIND: {
-    name: "Tailwind",
+    name: "TailwindCSS",
     class: "bg-black text-white",
     icon: Tailwind,
   },
@@ -64,16 +68,54 @@ const TAGS = {
     class: "bg-[#1BDBDB] text-black",
     icon: GoDaddy,
   },
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-[#270dad] text-white",
+    icon: Angular,
+  },
+  EXPRESS: {
+    name: "Express.js",
+    class: "bg-[#2e4db1] text-white",
+    icon: Express,
+  },
+  NODE: {
+    name: "Node.js",
+    class: "bg-[#90ba08] text-black",
+    icon: Node,
+  },
+  VERCEL: {
+    name: "Vercel",
+    class: "bg-black text-white",
+    icon: Vercel,
+  },
 }
 const PROJECTS = [
 {
-    title: "MediLatam Connect",
+    title: "Sho-Bonsai Store",
     description:
-      "La aplicación de telemedicina permite a los pacientes tener consultas médicas mediante video llamadas y otros medios de comunicación, todo desde la comodidad de sus hogares. Los médicos pueden acceder a la historia clínica del paciente durante la consulta, mientras que el personal administrativo del centro médico puede gestionar las reuniones y otras funciones de la aplicación.",
+      "Página web realizada manualmente desde cero en Angular con TailwindCSS y Typescript. Integra la API REST de eBay para obtener los datos de productos a través de un servidor Proxy propio realizado en Node.js y Express.js para superar la restricción por CORS. Tanto el front-end como el back-end han sido desplegados en Vercel.",
+    github: "https://github.com/ChristianP-7/sho-bonsai.git",
+    link: "https://sho-bonsai.vercel.app/",
+    image: "/projects/sho-bonsai.webp",
+    tags: [TAGS.ANGULAR, TAGS.TAILWIND, TAGS.NODE, TAGS.EXPRESS, TAGS.VERCEL],
+  },
+  
+  {
+    title: "Página Web de Noticias",
+    description:
+      "Página web de noticias en formato blog que implementa varios widgets además de categorías y paginación. Desarrollado y administrado enteramente con Wordpress y alojado en un hosting de GoDaddy.",
+    link: "https://elpuebloperuano.com/",
+    image: "/projects/pueblo-peruano.webp",
+    tags: [TAGS.WORDPRESS, TAGS.GODADDY],
+  },
 
+{
+    title: "MediLatam",
+    description:
+      "La aplicación de telemedicina que permite a los pacientes tener consultas médicas mediante videollamadas y otros medios de comunicación, todo desde la comodidad de sus hogares. Los médicos pueden acceder a la historia clínica del paciente durante la consulta, mientras que el personal administrativo del centro médico puede gestionar las reuniones y otras funciones de la aplicación.",
     link: "https://medilatam.vercel.app/dashboard",
     github: "https://github.com/ChristianP-7/c17-49-n-java",
-    image: "/projects/proyecto4.webp",
+    image: "/projects/medilatam.webp",
     tags: [TAGS.JAVA, TAGS.SPRING, TAGS.NEXT, TAGS.POSTGRESQL, TAGS.TAILWIND],
   },
 
@@ -84,27 +126,10 @@ const PROJECTS = [
 
     link: "https://clientes-gestion.vercel.app/",
     github: "https://github.com/ChristianP-7/clientes-gestion",
-    image: "/projects/proyecto1.webp",
+    image: "/projects/gestion-clientes.webp",
     tags: [TAGS.JAVA, TAGS.SPRING, TAGS.REACT, TAGS.POSTGRESQL, TAGS.DOCKER],
   },
 
-  {
-    title: "Aplicación de escritorio para Spa de Mascotas",
-    description:
-      "Esta aplicación permite guardar en una base de datos los datos de las mascotas y los dueños de éstas Para poseriormente poder realizar operacioines CRUD. Desarrollado en Java con JSP, utilizando JPA y una base de datos con MySQL.",
-    github: "https://github.com/ChristianP-7/PeluqueriaCanina",
-    image: "/projects/proyecto2.webp",
-    tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.DOCKER],
-  },
-
-  {
-    title: "Página Web de Noticias",
-    description:
-      "Página web de noticias en formato blog que implementa varios widgets además de categorías y paginación. Desarrollado y administrado enteramente con Wordpress y alojado en un hosting de GoDaddy. Proximamente en funcionamiento.",
-    link: "https://elpuebloperuano.com/",
-    image: "/projects/proyecto3.webp",
-    tags: [TAGS.WORDPRESS, TAGS.GODADDY],
-  },
 
 ]
 ---
