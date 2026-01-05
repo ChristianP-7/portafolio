@@ -19,98 +19,98 @@ import Vercel from "./icons/Vercel.astro"
 import JavaScript from "./icons/JavaScript.astro"
 import Css from "./icons/Css.astro"
 import Shopify from "./icons/Shopify.astro"
-import Astro from "./icons/Astro.astro"
+import AstroIcon from "./icons/AstroIcon.astro"
 
 const TAGS = {
   SPRING: {
     name: "Spring",
     class: "bg-white text-black",
-    icon: Spring,
+    icon: "spring",
   },
   MYSQL: {
     name: "MySQL",
     class: "bg-[#F29111] text-white",
-    icon: MySQL,
+    icon: "mysql",
   },
   POSTGRESQL: {
     name: "PosgreSQL",
     class: "bg-white text-black",
-    icon: Postgres,
+    icon: "postgres",
   },
   JAVA: {
     name: "Java",
     class: "bg-[#433331] text-white",
-    icon: Java,
+    icon: "java",
   },
   DOCKER: {
     name: "Docker",
     class: "bg-black text-white",
-    icon: Docker,
+    icon: "docker",
   },
   REACT: {
     name: "React",
     class: "bg-black text-white",
-    icon: React,
+    icon: "react",
   },
   WORDPRESS: {
     name: "Wordpress",
     class: "bg-white text-black",
-    icon: Wordpress,
+    icon: "wordpress",
   },
   NEXT: {
     name: "Next.js",
     class: "bg-[#003785] text-white",
-    icon: Next,
+    icon: "next",
   },
   TAILWIND: {
     name: "TailwindCSS",
     class: "bg-black text-white",
-    icon: Tailwind,
+    icon: "tailwind",
   },
   GODADDY: {
     name: "GoDaddy",
     class: "bg-[#1BDBDB] text-black",
-    icon: GoDaddy,
+    icon: "godaddy",
   },
   ANGULAR: {
     name: "Angular",
     class: "bg-[#270dad] text-white",
-    icon: Angular,
+    icon: "angular",
   },
   EXPRESS: {
     name: "Express.js",
     class: "bg-[#2e4db1] text-white",
-    icon: Express,
+    icon: "express",
   },
   NODE: {
     name: "Node.js",
     class: "bg-[#90ba08] text-black",
-    icon: Node,
+    icon: "node",
   },
   VERCEL: {
     name: "Vercel",
     class: "bg-black text-white",
-    icon: Vercel,
+    icon: "vercel",
   },
-  ASTRO: {
+  ASTROICON: {
     name: "Astro",
-    class: "bg-white text-black",
-    icon: Astro,
+    class: "bg-black text-white",
+    icon: "astroicon",
   },
   JAVASCRIPT: {
     name: "JavaScript",
     class: "bg-black text-white",
-    icon: JavaScript,
+    icon: "javascript",
   },
   CSS: {
-    name: "Css",
+    name: "CSS",
     class: "bg-white text-black",
-    icon: Css,
+    icon: "css",
   },
   SHOPIFY: {
     name: "Shopify",
     class: "bg-black text-white",
-    icon: Shopify,
+    icon: "shopify",
   },
 }
 const PROJECTS = [
@@ -120,7 +120,7 @@ const PROJECTS = [
       "E-commerce desarrollado en Shopify usando Astro, Liquid, JavaScript y CSS. Permite gestionar pedidos, administrar entregas e inventario además de procesar pagos con tarjetas, Yape o Plin a través Culqui ",
     link: "https://www.savitri.pe/",
     image: "/projects/savitri.webp",
-    tags: [TAGS.ASTRO, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.SHOPIFY],
+    tags: [TAGS.ASTROICON, TAGS.JAVASCRIPT, TAGS.CSS, TAGS.SHOPIFY],
   },
 {
     title: "Sho-Bonsai Store",
@@ -187,7 +187,24 @@ const PROJECTS = [
               <span
                 class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
               >
-                <tag.icon class="size-4" />
+                {tag.icon === "spring" && <Spring class="size-4" />}
+                {tag.icon === "mysql" && <MySQL class="size-4" />}
+                {tag.icon === "postgres" && <Postgres class="size-4" />}
+                {tag.icon === "java" && <Java class="size-4" />}
+                {tag.icon === "docker" && <Docker class="size-4" />}
+                {tag.icon === "react" && <React class="size-4" />}
+                {tag.icon === "angular" && <Angular class="size-4" />}
+                {tag.icon === "node" && <Node class="size-4" />}
+                {tag.icon === "express" && <Express class="size-4" />}
+                {tag.icon === "tailwind" && <Tailwind class="size-4" />}
+                {tag.icon === "astroicon" && <AstroIcon class="size-4" />}
+                {tag.icon === "shopify" && <Shopify class="size-4" />}
+                {tag.icon === "vercel" && <Vercel class="size-4" />}
+                {tag.icon === "javascript" && <JavaScript class="size-4" />}
+                {tag.icon === "css" && <Css class="size-4" />}
+                {tag.icon === "wordpress" && <Wordpress class="size-4" />}
+                {tag.icon === "godaddy" && <GoDaddy class="size-4" />}
+
                 {tag.name}
               </span>
             </li>
